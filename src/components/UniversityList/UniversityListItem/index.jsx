@@ -3,9 +3,7 @@ import React from 'react'
 const ListItem = ({ university, index }) => {
     const { name, country, web_pages: [link = ''] = [] } = university;
     let url = link;
-    if (!/^https?:\/\//i.test(url)) {
-        url = 'http://' + url;
-    }
+    if (!/^(https|http)?:\/\//i.test(url)) url = 'http://' + url;
     return (
         <tr>
             <td>{index+1}</td>

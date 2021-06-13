@@ -1,11 +1,13 @@
 import 'semantic-ui-css/semantic.min.css'
-import UniversityList from './UniversityList';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import UniversityListContainer from './components/UniversityListContainer';
 
 function App() {
   return (
-    <div className="App">
-      <UniversityList />
-    </div>
+      <Provider store={store}>
+        <UniversityListContainer />
+      </Provider>
   );
 }
 
