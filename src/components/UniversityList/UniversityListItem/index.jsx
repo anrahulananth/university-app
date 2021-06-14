@@ -7,7 +7,7 @@ const ListItem = ({ university, index }) => {
     return (
         <tr>
             <td>{index+1}</td>
-            <td>{link ? (<a href={url} target="_blank" rel="noreferrer">{name}</a>) : {name}}</td>
+            <td>{link ? (<a href={url} target="_blank" rel="noreferrer"><u>{name}</u></a>) : {name}}</td>
             <td>{country}</td>
         </tr>
     );

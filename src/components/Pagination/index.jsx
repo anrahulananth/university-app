@@ -15,12 +15,13 @@ const Pagination = ({
         <Container>
             <Button
                 variant="outline-primary"
+                className="previous-page"
                 disabled={page === 1}
                 onClick={() => handlePagination(page-1)}
             >
-                Previous
+                {"<"}
             </Button>
-            Current Page:
+            Page:
             &nbsp;
             <Select
                 value={page}
@@ -30,10 +31,11 @@ const Pagination = ({
             &nbsp;
             <Button
                 variant="outline-primary"
+                className="next-page"
                 disabled={(page+1)*limit >= total}
                 onClick={() => handlePagination(page+1)}
             >
-                Next
+                {">"}
             </Button>
         </Container>     
     );
